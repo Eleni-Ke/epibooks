@@ -1,18 +1,6 @@
 import { Component } from "react";
 import { Card, Col } from "react-bootstrap";
-
-// const SingleBook = (props) => {
-//   return (
-//     <Col key={props.book.asin}>
-//       <Card className="singleBook">
-//         <Card.Img variant="top" src={props.book.img} />
-//         <Card.Body>
-//           <Card.Title>{props.book.title}</Card.Title>
-//         </Card.Body>
-//       </Card>
-//     </Col>
-//   );
-// };
+import CommentArea from "./CommentArea";
 
 class SingleBook extends Component {
   state = {
@@ -29,14 +17,19 @@ class SingleBook extends Component {
               this.setState({ selected: true });
             }
           }}
-          className={this.state.selected ? "bg-dark" : ""}
+          className={
+            this.state.selected ? "border-danger main-card" : "main-card"
+          }
         >
           <Card.Img variant="top" src={this.props.book.img} />
-          <Card.Body>
+          <Card.Body className="main-card-body">
             <Card.Title className="truncate">
               {this.props.book.title}
             </Card.Title>
           </Card.Body>
+          {this.state.selected && (
+            <CommentArea book={this.props.book} id={this.props.book.asin} />
+          )}
         </Card>
       </Col>
     );

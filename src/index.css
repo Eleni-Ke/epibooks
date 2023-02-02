@@ -24,8 +24,10 @@ code {
 /* jumbotron */
 .jumbotron {
   background: url("https://images.photowall.com/products/45534/old-library.jpg?h=699&q=85");
-  height: 20rem;
-  background-position-y: -5rem;
+  height: 30rem;
+  background-position-y: 0rem;
+  background-repeat: no-repeat;
+  background-size: cover;
   text-align: center;
   align-items: center;
   display: flex;
@@ -55,20 +57,31 @@ code {
 
 /* cards */
 
-.col .card {
-  background-color: rgba(0, 0, 0, 0.24);
+.row {
+  align-items: baseline;
+}
+
+.col .main-card {
   margin-top: 3rem;
+  background-color: rgba(0, 0, 0, 0);
+  display: flex;
 }
 
 .card-img-top {
-  height: 15rem;
   object-fit: cover;
   overflow: hidden;
-  box-shadow: rgb(38 57 77) -21px 5px 12px -13px;
+  box-shadow: rgb(38 57 77) -21px 15px 12px -13px;
+  border-bottom: 5px solid rgb(199, 199, 199);
+  border-left: 3px solid rgb(97, 27, 27);
 }
 
-.card-body {
-  height: 5rem;
+.main-card .main-card-body {
+  background-color: rgba(0, 0, 0, 0.419);
+  margin-top: 1rem;
+  border-radius: 10px;
+}
+
+.main-card .card-title {
   color: rgb(244, 244, 230);
 }
 
@@ -77,4 +90,24 @@ code {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+/* card footer */
+
+.list-group-item {
+  color: black;
+  z-index: 1;
+}
+
+footer .card-body {
+  padding: 10px 5px;
+}
+
+.blockquote p {
+  margin-bottom: 5px;
+}
+
+footer .blockquote-footer {
+  font-size: 11px;
+  text-align: center;
 }
