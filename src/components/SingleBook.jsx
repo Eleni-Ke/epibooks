@@ -33,7 +33,9 @@ class SingleBook extends Component {
         >
           <Card.Img variant="top" src={this.props.book.img} />
           <Card.Body>
-            <Card.Title>{this.props.book.title}</Card.Title>
+            <Card.Title className="truncate">
+              {this.props.book.title}
+            </Card.Title>
           </Card.Body>
         </Card>
       </Col>

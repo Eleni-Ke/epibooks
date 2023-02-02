@@ -8,7 +8,7 @@ const Welcome = () => {
           <h1>This is the Epibook Book Nook!</h1>
         </Container>
       </Jumbotron>
-      <p className="text-center">
+      <p className="text-center welcome-message">
         Welcome to the Epibook Book Nook. We hope that you can find something
         that you like!
       </p>
