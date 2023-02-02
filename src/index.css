@@ -73,6 +73,15 @@ code {
   box-shadow: rgb(38 57 77) -21px 15px 12px -13px;
   border-bottom: 5px solid rgb(199, 199, 199);
   border-left: 3px solid rgb(97, 27, 27);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.card-img-top:hover {
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+  box-shadow: -21px 15px 23px -13px rgb(38 57 77);
 }
 
 .main-card .main-card-body {
@@ -93,10 +102,15 @@ code {
 }
 
 /* card footer */
-
-.list-group-item {
-  color: black;
+.card footer {
+  /* position: static; */
   z-index: 1;
+}
+.list-group {
+  color: black;
+  position: absolute;
+  max-height: 12rem;
+  overflow: auto;
 }
 
 footer .card-body {

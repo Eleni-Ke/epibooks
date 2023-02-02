@@ -13,10 +13,6 @@ const SingleComment = (props) => {
         </blockquote>
       </Card.Body>
     </Card>
-    // <div>
-    //   <ListGroupItem>{props.commentText}</ListGroupItem>
-    //   <ListGroupItem>{props.commentRate}</ListGroupItem>
-    // </div>
   );
 };
 
