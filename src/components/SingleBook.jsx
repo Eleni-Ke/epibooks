@@ -9,19 +9,19 @@ class SingleBook extends Component {
   render() {
     return (
       <Col>
-        <Card
-          onClick={() => {
-            if (this.state.selected) {
-              this.setState({ selected: false });
-            } else {
-              this.setState({ selected: true });
-            }
-          }}
-          className={
-            this.state.selected ? "border-danger main-card" : "main-card"
-          }
-        >
-          <Card.Img variant="top" src={this.props.book.img} />
+        <Card className="main-card">
+          <Card.Img
+            variant="top"
+            src={this.props.book.img}
+            onClick={() => {
+              if (this.state.selected) {
+                this.setState({ selected: false });
+              } else {
+                this.setState({ selected: true });
+              }
+            }}
+            className={this.state.selected ? "border-danger" : ""}
+          />
           <Card.Body className="main-card-body">
             <Card.Title className="truncate">
               {this.props.book.title}
