@@ -29,6 +29,15 @@ class CommentArea extends Component {
   componentDidMount() {
     this.getComments();
   }
+  componentDidUpdate = (prevProps, prevState) => {
+    console.log("Book comment updated");
+    console.log("previous props", prevProps);
+    console.log("current props", this.props);
+    if (prevProps.book.title !== this.props.book.title) {
+      console.log("the update was because of a new book title");
+      this.getComments();
+    }
+  };
   render() {
     return (
       <footer>

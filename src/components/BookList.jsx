@@ -10,7 +10,7 @@ class BookList extends Component {
   };
   render() {
     return (
-      <Container fluid>
+      <Container>
         <InputGroup>
           <InputGroup.Text>Search</InputGroup.Text>
           <Form.Control

@@ -101,7 +101,7 @@ code {
   text-overflow: ellipsis;
 }
 
-/* card footer */
+/* comment */
 .card footer {
   /* position: static; */
   z-index: 1;
@@ -124,4 +124,29 @@ footer .card-body {
 footer .blockquote-footer {
   font-size: 11px;
   text-align: center;
+}
+
+.container-fluid.mainSection {
+  display: flex;
+}
+
+.mainSection .leftSection {
+  width: 50%;
+}
+
+.mainSection .rightSection {
+  width: 50%;
+  position: relative;
+}
+
+.rightSection.infoMessage {
+  font-size: 2rem;
+  background-color: antiquewhite;
+  height: 30rem;
+  display: flex;
+  align-items: center;
+  position: sticky;
+  top: 1rem;
+  margin-top: 5rem;
+  padding: 0 0.5rem;
 }

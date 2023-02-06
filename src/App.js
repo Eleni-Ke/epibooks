@@ -7,6 +7,8 @@ import Welcome from "./components/Welcome";
 import fantasyItems from "../src/data/books/fantasy.json";
 import BookList from "./components/BookList";
 import { Component } from "react";
+import CommentArea from "./components/CommentArea";
+import { Container } from "react-bootstrap";
 // import historyItems from "../data/books/history.json";
 // import horrorItems from "../data/books/horror.json";
 // import romanceItems from "../data/books/romance.json";
@@ -27,11 +29,26 @@ class App extends Component {
         <MyNav />
         <Welcome />
         {/* <AllTheBooks /> */}
-        <BookList
-          bookArray={fantasyItems}
-          selectedBookFromApp={this.state.currentBook}
-          changeSelectedBookFromApp={this.changeSelectedBook}
-        />
+        <Container fluid className="mainSection">
+          <BookList
+            bookArray={fantasyItems}
+            selectedBookFromApp={this.state.currentBook}
+            changeSelectedBookFromApp={this.changeSelectedBook}
+            className="leftSection"
+          />
+          {this.state.currentBook === "" ? (
+            <div className="rightSection infoMessage">
+              Please select a book to see the comments.
+            </div>
+          ) : (
+            <CommentArea
+              book={this.state.currentBook}
+              id={this.state.currentBook.asin}
+              className="rightSection"
+            />
+          )}
+        </Container>
+
         <MyFooter />
       </div>
     );
