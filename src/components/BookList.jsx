@@ -30,7 +30,16 @@ class BookList extends Component {
         {this.state.search.word === "" ? (
           <Row className="row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-5 row-cols-xl-6">
             {this.props.bookArray.map((fantasyBook) => {
-              return <SingleBook book={fantasyBook} key={fantasyBook.asin} />;
+              return (
+                <SingleBook
+                  book={fantasyBook}
+                  key={fantasyBook.asin}
+                  selectedBookFromApp={this.props.selectedBookFromApp}
+                  changeSelectedBookFromApp={
+                    this.props.changeSelectedBookFromApp
+                  }
+                />
+              );
             })}
           </Row>
         ) : (
@@ -40,7 +49,14 @@ class BookList extends Component {
                 fantasyBook.title
                   .toLocaleLowerCase()
                   .includes(this.state.search.word.toLocaleLowerCase()) && (
-                  <SingleBook book={fantasyBook} key={fantasyBook.asin} />
+                  <SingleBook
+                    book={fantasyBook}
+                    key={fantasyBook.asin}
+                    selectedBookFromApp={this.props.selectedBookFromApp}
+                    changeSelectedBookFromApp={
+                      this.props.changeSelectedBookFromApp
+                    }
+                  />
                 )
               );
             })}
