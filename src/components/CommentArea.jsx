@@ -12,7 +12,7 @@ class CommentArea extends Component {
   };
   getComments = async () => {
     try {
-      let response = await fetch(url + this.props.id, {
+      let response = await fetch(url + this.props.asin, {
         method: "GET",
         headers: {
           Authorization:
@@ -30,9 +30,9 @@ class CommentArea extends Component {
     this.getComments();
   }
   componentDidUpdate = (prevProps, prevState) => {
-    console.log("Book comment updated");
-    console.log("previous props", prevProps);
-    console.log("current props", this.props);
+    // console.log("Book comment updated");
+    // console.log("previous props", prevProps);
+    // console.log("current props", this.props);
     if (prevProps.book.title !== this.props.book.title) {
       console.log("the update was because of a new book title");
       this.getComments();
@@ -41,7 +41,7 @@ class CommentArea extends Component {
   render() {
     return (
       <div className="rightSection commentMessage">
-        <AddComment asin={this.props.id} />
+        <AddComment asin={this.props.asin} />
         <CommentsList arr={this.state.comments} />
       </div>
     );

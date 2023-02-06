@@ -21,8 +21,9 @@ class App extends Component {
   };
   changeSelectedBook = (elementClicked) => {
     this.setState({ currentBook: elementClicked });
-    console.log(this.state.currentBook);
+    // console.log(this.state.currentBook);
   };
+
   render() {
     return (
       <div>
@@ -42,7 +43,7 @@ class App extends Component {
           ) : (
             <CommentArea
               book={this.state.currentBook}
-              id={this.state.currentBook.asin}
+              asin={this.state.currentBook.asin}
             />
           )}
         </Container>

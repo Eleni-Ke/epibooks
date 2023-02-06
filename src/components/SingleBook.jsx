@@ -3,8 +3,8 @@ import { Card, Col } from "react-bootstrap";
 // import CommentArea from "./CommentArea";
 
 class SingleBook extends Component {
-  checkSelected = (value) =>
-    value === this.props.selectedBookFromApp ? "selected" : "";
+  // checkSelected = (value) =>
+  //   value === this.props.selectedBookFromApp ? "selected" : "";
   render() {
     return (
       <Col>
@@ -14,6 +14,7 @@ class SingleBook extends Component {
             src={this.props.book.img}
             onClick={(e) => {
               this.props.changeSelectedBookFromApp(this.props.book);
+              console.log(this.props.book);
             }}
             className={
               this.props.selectedBookFromApp === this.props.book

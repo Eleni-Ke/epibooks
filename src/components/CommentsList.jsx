@@ -5,13 +5,13 @@ const CommentsList = (props) => {
   return (
     <ListGroup>
       {props.arr.map((commentObj) => {
-        // console.log(commentObj.comment);
+        console.log(commentObj._id);
         return (
           <SingleComment
             comment={commentObj}
             commentText={commentObj.comment}
             commentRate={commentObj.rate}
-            key={commentObj.asin}
+            key={commentObj._id}
           />
         );
       })}
