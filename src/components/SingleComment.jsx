@@ -16,6 +16,7 @@ const SingleComment = (props) => {
       });
       if (response.ok) {
         alert("Comment deleted");
+        props.updateCommentArea();
       } else {
         alert("There has been an error!");
       }

@@ -35,6 +35,7 @@ class AddComment extends Component {
             elementId: this.props.asin,
           },
         });
+        this.props.updateCommentArea();
       } else {
         console.log("error while sending comment");
         alert("Something went wrong when sending comment!");

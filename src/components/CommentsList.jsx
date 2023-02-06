@@ -12,6 +12,7 @@ const CommentsList = (props) => {
             commentText={commentObj.comment}
             commentRate={commentObj.rate}
             key={commentObj._id}
+            updateCommentArea={props.updateCommentArea}
           />
         );
       })}

@@ -41,8 +41,14 @@ class CommentArea extends Component {
   render() {
     return (
       <div className="rightSection commentMessage">
-        <AddComment asin={this.props.asin} />
-        <CommentsList arr={this.state.comments} />
+        <AddComment
+          asin={this.props.asin}
+          updateCommentArea={this.getComments}
+        />
+        <CommentsList
+          arr={this.state.comments}
+          updateCommentArea={this.getComments}
+        />
       </div>
     );
   }
