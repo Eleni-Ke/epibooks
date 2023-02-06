@@ -4,7 +4,8 @@ import { Form, Button } from "react-bootstrap";
 class AddComment extends Component {
   state = {
     comment: "",
-    rating: "",
+    rate: 1,
+    elementId: this.props.asin,
   };
   render() {
     return (

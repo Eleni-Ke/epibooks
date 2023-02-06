@@ -40,10 +40,10 @@ class CommentArea extends Component {
   };
   render() {
     return (
-      <footer>
-        <AddComment />
+      <div className="rightSection commentMessage">
+        <AddComment asin={this.props.asin} />
         <CommentsList arr={this.state.comments} />
-      </footer>
+      </div>
     );
   }
 }

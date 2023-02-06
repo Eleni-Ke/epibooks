@@ -109,7 +109,7 @@ code {
 .list-group {
   color: black;
   position: absolute;
-  max-height: 12rem;
+  max-height: 25rem;
   overflow: auto;
 }
 
@@ -131,11 +131,11 @@ footer .blockquote-footer {
 }
 
 .mainSection .leftSection {
-  width: 50%;
+  width: 65%;
 }
 
 .mainSection .rightSection {
-  width: 50%;
+  width: 45%;
   position: relative;
 }
 
@@ -149,4 +149,12 @@ footer .blockquote-footer {
   top: 1rem;
   margin-top: 5rem;
   padding: 0 0.5rem;
+}
+
+.rightSection.commentMessage {
+  margin-inline: 2rem;
+  margin-top: 5rem;
+  position: sticky;
+  top: 1rem;
+  height: 30rem;
 }

@@ -34,7 +34,6 @@ class App extends Component {
             bookArray={fantasyItems}
             selectedBookFromApp={this.state.currentBook}
             changeSelectedBookFromApp={this.changeSelectedBook}
-            className="leftSection"
           />
           {this.state.currentBook === "" ? (
             <div className="rightSection infoMessage">
@@ -44,7 +43,6 @@ class App extends Component {
             <CommentArea
               book={this.state.currentBook}
               id={this.state.currentBook.asin}
-              className="rightSection"
             />
           )}
         </Container>
